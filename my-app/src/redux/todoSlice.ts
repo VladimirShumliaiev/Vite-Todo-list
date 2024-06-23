@@ -11,7 +11,6 @@ type TodoState = {
     list: Todo[]
     error: string | null
     pending: boolean
-
 }
 
 const initialState: TodoState = {
@@ -40,7 +39,7 @@ const todoSlice = createSlice({
     builder
         .addCase(fetchTodo.pending, (state) => {
             state.pending = true
-            state.error = null // Change false to null
+            state.error = null 
         })
         .addCase(fetchTodo.fulfilled, (state, action) => {
             state.list = action.payload
