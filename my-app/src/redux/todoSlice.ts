@@ -9,15 +9,15 @@ export type Todo = {
 
 type TodoState = {
     list: Todo[]
-    // error: null | string
-    // pending: boolean
+    error: string | null
+    pending: boolean
 
 }
 
 const initialState: TodoState = {
     list: [],
-    // error: null,
-    // pending: false
+    error: null,
+    pending: false
 }
 
 export const fetchTodo = createAsyncThunk<Todo[], undefined, {rejectValue: string}>(
@@ -35,16 +35,16 @@ export const fetchTodo = createAsyncThunk<Todo[], undefined, {rejectValue: strin
 const todoSlice = createSlice({
    name: 'Todo',
    initialState,
-   reducer:{},
+   reducers:{},
    extraReducers: builder => 
     builder
         .addCase(fetchTodo.pending, (state) => {
             state.pending = true
-            state.error = false
+            state.error = null // Change false to null
         })
         .addCase(fetchTodo.fulfilled, (state, action) => {
             state.list = action.payload
-            state.payload = false
+            state.pending = false
         })
 })
 
