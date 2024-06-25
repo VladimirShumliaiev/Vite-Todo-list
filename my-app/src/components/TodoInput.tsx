@@ -22,7 +22,7 @@ const TodoInput: FC<Props> = (props) => {
   
   return (
     <form onSubmit={onSubmitHandle}>
-      <input type="text" 
+      <input  
       value={title} 
       onChange={onChangeHandle}
       ref={inputRef}
