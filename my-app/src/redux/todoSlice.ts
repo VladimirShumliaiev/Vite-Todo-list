@@ -22,7 +22,7 @@ const initialState: TodoState = {
 export const fetchTodo = createAsyncThunk<Todo[], undefined, {rejectValue: string}>(
     'Todo/fetchTodo',
     async (_,{rejectWithValue}) => {
-        const response = await axios('https://jsonplaceholder.typicode.com/todos')
+        const response = await axios('https://jsonplaceholder.typicode.com/todos/?_limit=10')
 
         if (!response) {
             return rejectWithValue('error fetch todo')
@@ -43,7 +43,7 @@ export const addTodo = createAsyncThunk<Todo,string, {rejectValue: string}>(
         if (!response) {
             return rejectWithValue('error add')
         }
-        return response.data
+        return await response.data
     }
 
 )
@@ -60,7 +60,7 @@ export const toggleTodo = createAsyncThunk<Todo, string, {rejectValue: string, s
                    return rejectWithValue('error toggle')
                 }
 
-                return response.data
+                return await response.data
             }
     }
 )
