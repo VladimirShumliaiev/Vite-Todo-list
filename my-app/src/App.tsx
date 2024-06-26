@@ -21,6 +21,7 @@ function App() {
   return (
     <div className='App'>
         <TodoInput title={text} setTitle={setText} addTodo={addTask}/>
+        <br />
         <TodoList/>
     </div>
   );
