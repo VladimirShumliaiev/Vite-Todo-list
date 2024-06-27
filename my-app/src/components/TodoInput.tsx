@@ -12,8 +12,11 @@ const TodoInput: FC<Props> = (props) => {
 
     const onSubmitHandle: React.FormEventHandler<HTMLFormElement> = (event) => {
        event.preventDefault()
-       addTodo()
-       setTitle('')
+       if (title.trim().length){
+        addTodo()
+        setTitle('')
+       }
+    
     }
 
     const onChangeHandle: React.ChangeEventHandler<HTMLInputElement> = (e) => {
