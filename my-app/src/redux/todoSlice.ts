@@ -37,7 +37,7 @@ export const addTodo = createAsyncThunk<Todo,string, {rejectValue: string}>(
         const response = await axios.post('https://jsonplaceholder.typicode.com/todos',{
             id: Date.now,
             title: title,
-            completed: true
+            completed: false
         })
 
         if (!response) {
