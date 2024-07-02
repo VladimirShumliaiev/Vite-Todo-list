@@ -31,7 +31,7 @@ const TodoInput: FC<Props> = (props) => {
       ref={inputRef}
       placeholder='add todo...'
        />
-      <button>ok</button>
+      <button>add</button>
     </form>
   )
 }
