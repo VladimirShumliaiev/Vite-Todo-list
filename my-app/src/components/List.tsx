@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAppDispatch, useAppSelector } from '../hooks/hooks'
+import { useAppSelector } from '../hooks/hooks'
 import ListItem from './ListItem'
 
 const List = () => {
@@ -9,7 +9,7 @@ const List = () => {
   return (
     <div>
         {
-            todoList.map(todo => <ListItem key={todo} {...todo}/>)
+            todoList.map(todo => <ListItem key={todo.id} {...todo}/>)
         }
     </div>
   )
