@@ -1,9 +1,10 @@
 import React from 'react'
+import NavLinkNavBar from '../../Rotings/NavLinkNavBar'
 
 const NavBar = () => {
   return (
     <div>
-      NavBar
+     <NavLinkNavBar/>
     </div>
   )
 }
