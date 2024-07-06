@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Todo from "../components/Todo/Todo";
 
 const NavLinkNavBar = () => {
   return (
