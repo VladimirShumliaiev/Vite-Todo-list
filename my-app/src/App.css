@@ -1,4 +1,14 @@
 .App {
+
+  display: grid;
+
+  grid-template-areas: 
+  H H,
+  N M,
+  F F;
+
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 60px;
   color: rgb(8, 8, 233);
   text-align: center;
 }

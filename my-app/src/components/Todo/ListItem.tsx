@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { Todo, deleteTodo, toggleTodo } from '../redux/todoSlice'
-import { useAppDispatch } from '../hooks/hooks'
+import { Todo, deleteTodo, toggleTodo } from '../../redux/todoSlice'
+import { useAppDispatch } from '../../hooks/hooks'
 
 
 const ListItem: FC<Todo> = (props) => {
