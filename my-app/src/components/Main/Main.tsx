@@ -3,7 +3,7 @@ import Todo from '../Todo/Todo'
 
 const Main = () => {
   return (
-    <div>
+    <div className='Main'>
         Main
       <Todo/>
     </div>

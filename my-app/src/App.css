@@ -3,12 +3,53 @@
   display: grid;
 
   grid-template-areas: 
-  H H,
-  N M,
-  F F;
+  'H H H'
+  'N M NR'
+  'F F F';
 
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 220px 1000px;
   grid-template-rows: 60px;
   color: rgb(8, 8, 233);
+  /* text-align: center; */
+  width: 1400px;
+  margin: 5px auto;
+  grid-gap: 2px;
+}
+
+.Header {
+  display: grid;
+  grid-area: H;
+  background-color: hotpink;
+  padding: 20px;
+  text-align: center;
+}
+
+.NavBar {
+  display: grid;
+  grid-area: N;
+  background-color: coral;
+  padding: 10px;
+}
+
+.NavBarRight {
+  display: grid;
+  grid-area: NR;
+  background-color: chartreuse;
+  /* padding: 10px; */
+  text-align: center;
+}
+
+.Main {
+  display: grid;
+  grid-area: M;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.Footer {
+  display: grid;
+  grid-area: F;
+  color: white;
+  background-color: rgb(34, 17, 190);
   text-align: center;
 }

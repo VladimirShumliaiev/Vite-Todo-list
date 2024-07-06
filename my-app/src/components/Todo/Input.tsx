@@ -31,7 +31,8 @@ const Input: FC<InputProps> = (props) => {
              onChange={onChangeHandler}
              placeholder='add todo...'
              />
-            <button> ok </button>
+            <button> add </button>
+            <pre/>
         </form>
     </div>
   )
