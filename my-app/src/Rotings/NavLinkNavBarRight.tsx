@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { NavLink } from 'react-router-dom'
 import './NavLinkNavBar.css'
 
@@ -6,7 +6,7 @@ type NavLinkNavBarRightProps = {
     isActive: boolean
 }
 
-const NavLinkNavBarRight = () => {
+const NavLinkNavBarRight: FC = () => {
 
   const isActive = ({isActive}: NavLinkNavBarRightProps) => isActive ? 'item-active-link' : ''
   return (
