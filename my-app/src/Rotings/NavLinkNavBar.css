@@ -1,0 +1,12 @@
+.item {
+  padding: 5px;
+}
+
+.item a {
+  text-decoration: none;
+  color: rgb(241, 238, 241);
+}
+
+a.item-active-link {
+  color: rgb(177, 14, 209);
+}

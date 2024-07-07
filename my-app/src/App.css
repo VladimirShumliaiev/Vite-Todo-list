@@ -1,11 +1,10 @@
 .App {
-
   display: grid;
 
-  grid-template-areas: 
-  'H H H'
-  'N M NR'
-  'F F F';
+  grid-template-areas:
+    "H H H"
+    "N M NR"
+    "F F F";
 
   grid-template-columns: 220px 1000px;
   grid-template-rows: 60px;
@@ -34,7 +33,7 @@
 .NavBarRight {
   display: grid;
   grid-area: NR;
-  background-color: chartreuse;
+  background-color: coral;
   /* padding: 10px; */
   text-align: center;
 }
