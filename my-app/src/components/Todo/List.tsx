@@ -40,7 +40,7 @@ const List = () => {
         pageClassName={style.Pagination}
         pageLinkClassName={style.pageNum}
         previousClassName={style.pageNum}
-        previousLinkClassName={style.pageNum}
+        // previousLinkClassName={style.pageNum}
         nextClassName={style.pageNum}
         // nextLinkClassName={style.pageNum}
         breakLabel="..."
