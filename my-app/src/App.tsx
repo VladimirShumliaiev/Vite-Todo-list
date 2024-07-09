@@ -1,6 +1,6 @@
 
 import './App.css'
-import Layout from './Rotings/Layout/Layout';
+import Layout from './Routings/Layout/Layout';
 
 function App() {
 

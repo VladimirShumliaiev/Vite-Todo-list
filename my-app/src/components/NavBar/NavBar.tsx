@@ -1,5 +1,5 @@
 import React from 'react'
-import NavLinkNavBar from '../../Rotings/NavLinkNavBar'
+import NavLinkNavBar from '../../Routings/NavLinkNavBar'
 
 const NavBar = () => {
   return (
