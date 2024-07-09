@@ -9,6 +9,7 @@ type NavLinkNavBarRightProps = {
 const NavLinkNavBarRight: FC = () => {
 
   const isActive = ({isActive}: NavLinkNavBarRightProps) => isActive ? 'item-active-link' : ''
+  
   return (
     <div className='item'>
      <NavLink className={isActive} to={'trial'}> Trial </NavLink>
