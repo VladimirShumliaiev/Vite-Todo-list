@@ -1,5 +1,5 @@
 export const trailObject = {
-  oneButton: "Hello js",
-  twoButton: "Hello HTML",
-  threeButton: "Hello React",
+  one: "hello JS",
+  two: "hello TS",
+  three: "hello React",
 };

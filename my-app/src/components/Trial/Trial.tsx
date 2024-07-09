@@ -4,25 +4,22 @@ import './Trail.css'
 
 
 const Trial = () => {
-  const [state, setState] = useState("click");
+  const [state, setState] = useState(trailObject.one)
 
-  
-  const handleOnClick = (value: string) => {
-    setState(value);
-  };
+  const handleOnChange = (value: string) => {
+      setState(value)
+  }
 
   return (
     <div>
       <span>
-        <button className={state === trailObject.oneButton ? 'trail-active' : ''} onClick={() => handleOnClick(trailObject.oneButton)}>a</button>
-      </span>{" "}
+        <button className={state === trailObject.one ? 'trail-active' : ''} onClick={() => handleOnChange(trailObject.one)}>1</button>{' '}
+      </span>
       <span>
-        <button className={state === trailObject.twoButton ? 'trail-active' : ''} onClick={() => handleOnClick(trailObject.twoButton)}>b</button>
-      </span>{" "}
+        <button className={state === trailObject.two ? 'trail-active' : ''} onClick={() => handleOnChange(trailObject.two)}>2</button>{' '}
+      </span>
       <span>
-        <button className={state === trailObject.threeButton ? 'trail-active' : ''} onClick={() => handleOnClick(trailObject.threeButton)}>
-          c
-        </button>
+        <button className={state === trailObject.three ? 'trail-active' : ''} onClick={() => handleOnChange(trailObject.three)}>3</button>
       </span>
       <div>{state}</div>
     </div>

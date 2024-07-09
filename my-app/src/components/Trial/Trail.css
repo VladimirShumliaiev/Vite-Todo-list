@@ -2,10 +2,8 @@
 }
 
 .trail a {
-  background-color: rgb(88, 201, 13);
+  background-color: chartreuse;
 }
-
 .trail-active {
   background-color: blue;
-  color: white;
 }
