@@ -1,11 +1,19 @@
-import React from 'react'
+import React from "react";
 
 const Trial = () => {
   return (
-    <div>
-        TRIAL TRIAL TRIAL
-    </div>
-  )
-}
+    <>
+      <div>
+        <button>a</button>
+      </div>
+      <div>
+        <button>b</button>
+      </div>
+      <div>
+        <button>c</button>
+      </div>
+    </>
+  );
+};
 
-export default Trial
+export default Trial;
