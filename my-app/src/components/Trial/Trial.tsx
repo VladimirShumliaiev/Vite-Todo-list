@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { trailObject } from "./trail";
-import './Trail.css'
+import { trialObject } from "./trial";
+import './Trial.css'
 
 
 const Trial = () => {
-  const [state, setState] = useState(trailObject.one)
+  const [state, setState] = useState(trialObject.one)
 
   const handleOnChange = (value: string) => {
       setState(value)
@@ -13,13 +13,13 @@ const Trial = () => {
   return (
     <div>
       <span>
-        <button className={state === trailObject.one ? 'trail-active' : ''} onClick={() => handleOnChange(trailObject.one)}>1</button>{' '}
+        <button className={state === trialObject.one ? 'trial-active' : ''} onClick={() => handleOnChange(trialObject.one)}>1</button>{' '}
       </span>
       <span>
-        <button className={state === trailObject.two ? 'trail-active' : ''} onClick={() => handleOnChange(trailObject.two)}>2</button>{' '}
+        <button className={state === trialObject.two ? 'trial-active' : ''} onClick={() => handleOnChange(trialObject.two)}>2</button>{' '}
       </span>
       <span>
-        <button className={state === trailObject.three ? 'trail-active' : ''} onClick={() => handleOnChange(trailObject.three)}>3</button>
+        <button className={state === trialObject.three ? 'trial-active' : ''} onClick={() => handleOnChange(trialObject.three)}>3</button>
       </span>
       <div>{state}</div>
     </div>
