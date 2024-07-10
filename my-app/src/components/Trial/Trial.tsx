@@ -13,13 +13,13 @@ const Trial = () => {
   return (
     <div>
       <span>
-        <button className={state === trialObject.one ? 'trial-active' : ''} onClick={() => handleOnChange(trialObject.one)}>1</button>{' '}
+        <button className={state === trialObject.one ? 'trial-active' : ''} onClick={() => handleOnChange(trialObject.one)}>one</button>{' '}
       </span>
       <span>
-        <button className={state === trialObject.two ? 'trial-active' : ''} onClick={() => handleOnChange(trialObject.two)}>2</button>{' '}
+        <button className={state === trialObject.two ? 'trial-active' : ''} onClick={() => handleOnChange(trialObject.two)}>two</button>{' '}
       </span>
       <span>
-        <button className={state === trialObject.three ? 'trial-active' : ''} onClick={() => handleOnChange(trialObject.three)}>3</button>
+        <button className={state === trialObject.three ? 'trial-active' : ''} onClick={() => handleOnChange(trialObject.three)}>three</button>
       </span>
       <div>{state}</div>
     </div>
