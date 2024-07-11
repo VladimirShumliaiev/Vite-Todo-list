@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     <div>
-      Todo Listt
+      Todo List
     </div>
   )
 }
