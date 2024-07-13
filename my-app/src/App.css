@@ -20,7 +20,7 @@
   grid-area: H;
   background-color: hotpink;
   padding: 20px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .NavBar {

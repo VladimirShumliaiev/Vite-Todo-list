@@ -1,0 +1,9 @@
+.rightBlock {
+  display: grid;
+  text-align: right;
+}
+
+.centerBlock {
+  display: grid;
+  text-align: center;
+}

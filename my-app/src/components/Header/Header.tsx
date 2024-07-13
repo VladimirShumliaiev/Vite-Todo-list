@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import style from './Header.module.css'
 
 const Header = () => {
+  const [state, setState] = useState(new Date())
+
+  setInterval(() => setState(new Date) ,1000)
+  
   return (
     <div>
-      Todo List
+       <span className={style.rightBlock}>Time:{state.toLocaleTimeString()}</span>
+       <span className={style.rightBlock}>Date:{state.toLocaleDateString()}</span>
     </div>
   )
 }
