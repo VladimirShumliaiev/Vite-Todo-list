@@ -1,71 +1,12 @@
 import React, { useState } from "react";
-import { trialObject } from "./trial";
-import "./Trial.css";
+import TrailButton from './TrialButton'
 
 const Trial = () => {
-  const [state, setState] = useState(trialObject.one);
-
-  const handleOnChange = (value: string) => {
-    setState(value);
-  };
-
+  const [state, setState] = useState('')
   return (
     <div>
-      <div>
-        <span>
-          <button
-            className={state === trialObject.one ? "trial-active" : ""}
-            onClick={() => handleOnChange(trialObject.one)}
-          >
-            1
-          </button>{" "}
-        </span>
-        <span>
-          <button
-            className={state === trialObject.two ? "trial-active" : ""}
-            onClick={() => handleOnChange(trialObject.two)}
-          >
-            2
-          </button>{" "}
-        </span>
-        <span>
-          <button
-            className={state === trialObject.three ? "trial-active" : ""}
-            onClick={() => handleOnChange(trialObject.three)}
-          >
-            3
-          </button>
-        </span>
-      </div>
-            <pre/>
-      <div>
-        <span>
-          <button
-            className={state === trialObject.four ? "trial-green" : ""}
-            onClick={() => handleOnChange(trialObject.four)}
-          >
-            4
-          </button>{" "}
-        </span>
-        <span>
-          <button
-            className={state === trialObject.five ? "trial-yellow" : ""}
-            onClick={() => handleOnChange(trialObject.five)}
-          >
-            5
-          </button>{" "}
-        </span>
-        <span>
-          <button
-            className={state === trialObject.six ? "trial-purple" : ""}
-            onClick={() => handleOnChange(trialObject.six)}
-          >
-           6
-          </button>
-        </span>
-      </div>
-
-      <div>{state}</div>
+    <TrailButton  state={state} setState={setState}/>
+        {state}
     </div>
   );
 };
