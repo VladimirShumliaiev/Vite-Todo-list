@@ -7,3 +7,11 @@
   display: grid;
   text-align: center;
 }
+
+.leftBlock {
+}
+
+.leftBlock img {
+  width: 90px;
+  right: 500px;
+}
