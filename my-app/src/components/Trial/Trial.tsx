@@ -52,7 +52,7 @@ const Trial = () => {
             className={state === trialObject.five ? "trial-yellow" : ""}
             onClick={() => handleOnChange(trialObject.five)}
           >
-            4
+            5
           </button>{" "}
         </span>
         <span>
@@ -60,7 +60,7 @@ const Trial = () => {
             className={state === trialObject.six ? "trial-purple" : ""}
             onClick={() => handleOnChange(trialObject.six)}
           >
-            4
+           6
           </button>
         </span>
       </div>
