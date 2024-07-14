@@ -10,7 +10,7 @@ const List = () => {
    const [currentItems, setCurrentItems] = useState(todoList);
    const [pageCount, setPageCount] = useState(0);
    const [itemOffset, setItemOffset] = useState(0);
-   const itemsPerPage = 10
+   const itemsPerPage = 9
  
    useEffect(() => {
      const endOffset = itemOffset + itemsPerPage;
