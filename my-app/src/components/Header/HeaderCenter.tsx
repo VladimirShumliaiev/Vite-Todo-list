@@ -5,7 +5,7 @@ const HeaderCenter = () => {
 
   return (
     <div>
-      Hello TSX
+      Hello TS
     </div>
   )
 }
