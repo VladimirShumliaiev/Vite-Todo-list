@@ -19,6 +19,7 @@ const Todo = () => {
   return (
     <div>
       <Input text={title} setText={setTitle} addTodo={addTask} />
+      <hr />
       <List />
     </div>
   );
