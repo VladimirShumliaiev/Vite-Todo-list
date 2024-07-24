@@ -1,20 +1,32 @@
-import React, { FC } from 'react'
-import { NavLink } from 'react-router-dom'
-import './NavLinkNavBar.css'
+import React, { FC } from "react";
+import { NavLink } from "react-router-dom";
+import "./NavLinkNavBar.css";
 
 type NavLinkNavBarRightProps = {
-    isActive: boolean
-}
+  isActive: boolean;
+};
 
 const NavLinkNavBarRight: FC = () => {
+  const isActive = ({ isActive }: NavLinkNavBarRightProps) =>
+    isActive ? "item-active-link" : "";
 
-  const isActive = ({isActive}: NavLinkNavBarRightProps) => isActive ? 'item-active-link' : ''
-  
   return (
-    <div className='item'>
-     <NavLink className={isActive} to={'trial'}> Trial </NavLink>
-    </div>
-  )
-}
+    <div className="item">
+      <div>
+        <NavLink className={isActive} to={"trial"}>
+          {" "}
+          Trial{" "}
+        </NavLink>
+      </div>
 
-export default NavLinkNavBarRight
+      <div>
+        <NavLink className={isActive} to={"test"}>
+          {" "}
+          Test{" "}
+        </NavLink>
+      </div>
+    </div>
+  );
+};
+
+export default NavLinkNavBarRight;

@@ -13,6 +13,7 @@ const Layout = () => {
           <Route index element={<HomePage />} />
           <Route path="todo" element={<Todo />} />
           <Route path="trial" element={<Trial />} />
+          <Route path="test" element={<div>test</div>} />
         </Route>
       </Routes>
     </div>
