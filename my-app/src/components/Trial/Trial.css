@@ -1,10 +1,10 @@
-.trial-active {
+.trial-blue {
   color: aliceblue;
   background-color: rgb(2, 2, 236);
 }
 
 .trial-green {
-  color: #fcfcfc;
+  color: #0c0000;
   background-color: #0ce90c;
 }
 
@@ -16,4 +16,13 @@
 .trial-purple {
   color: #ffffff;
   background-color: rgb(163, 4, 163);
+}
+
+.trial-red {
+  color: white;
+  background-color: red;
+}
+
+.trial-skyBlue {
+  background-color: rgb(9, 245, 245);
 }

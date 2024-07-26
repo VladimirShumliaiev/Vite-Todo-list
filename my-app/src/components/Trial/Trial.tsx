@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import TrailButton from './TrialButton'
-import { trialObject } from "./trialObject";
+import TrialButton from "./TrialButton";
+
+
 
 const Trial = () => {
-  const [state, setState] = useState(trialObject.one)
+ const [state, setState] = useState('')
   return (
     <div>
-    <TrailButton  state={state} setState={setState}/>
+        <TrialButton state={state} setState={setState}/>
         {state}
     </div>
   );

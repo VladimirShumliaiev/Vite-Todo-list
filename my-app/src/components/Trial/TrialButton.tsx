@@ -1,58 +1,29 @@
-import React, { FC } from "react";
-import "./Trial.css";
-import { trialObject } from "./trialObject";
+import React, { FC } from 'react'
+import { trialObject } from './trialObject'
+import './Trial.css'
+
 
 type Props = {
-  state: string;
-  setState: (str: string) => void;
-};
+  state: string
+  setState: (str: string) => void
+}
 
 const TrialButton: FC<Props> = (props) => {
-  const { state, setState } = props;
+  const {state, setState} = props
 
-  const handlerButton = (value: string) => {
-    setState(value);
-  };
+  const handleClick = (value: string) => {
+    setState(value)
+  }
   return (
     <div>
-      <button
-        className={state === trialObject.one ? "trial-active" : ""}
-        onClick={() => handlerButton(trialObject.one)}
-      >
-        1
-      </button>{" "}
-      <button
-        className={state === trialObject.two ? "trial-active" : ""}
-        onClick={() => handlerButton(trialObject.two)}
-      >
-        2
-      </button>{" "}
-      <button
-        className={state === trialObject.three ? "trial-green " : ""}
-        onClick={() => handlerButton(trialObject.three)}
-      >
-        3
-      </button>{" "}
-      <button
-        className={state === trialObject.four ? "trial-green " : ""}
-        onClick={() => handlerButton(trialObject.four)}
-      >
-        4
-      </button>{" "}
-      <button
-        className={state === trialObject.five ? "trial-yellow" : ""}
-        onClick={() => handlerButton(trialObject.five)}
-      >
-        5
-      </button>{" "}
-      <button
-        className={state === trialObject.six ? "trial-purple" : ""}
-        onClick={() => handlerButton(trialObject.six)}
-      >
-        6
-      </button>
+        <button className={state === trialObject.one ? 'trial-blue' : ''}  onClick={() => handleClick(trialObject.one)}> one </button>{' '}
+        <button className={state === trialObject.two ? 'trial-red' : ''}  onClick={() => handleClick(trialObject.two)}> two </button>{' '}
+        <button className={state === trialObject.three ? 'trial-yellow' : ''}  onClick={() => handleClick(trialObject.three)}> three </button>{' '}
+        <button className={state === trialObject.four ? 'trial-green' : ''}  onClick={() => handleClick(trialObject.four)}> four </button>{' '}
+        <button className={state === trialObject.five ? 'trial-purple' : ''}  onClick={() => handleClick(trialObject.five)}> five </button>{' '}
+        <button className={state === trialObject.six ? 'trial-skyBlue' : ''}  onClick={() => handleClick(trialObject.six)}> six </button>
     </div>
-  );
-};
+  )
+}
 
-export default TrialButton;
+export default TrialButton
