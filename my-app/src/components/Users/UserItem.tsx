@@ -1,10 +1,18 @@
 import React, { FC } from 'react'
 import Users from './UserType'
+import { useAppDispatch } from '../../hooks/hooks'
+import { deleteUser } from '../../redux/usersSlice'
 
 type PropsUsers = Users
 
 const UserItem: FC<PropsUsers> = (props) => {
     const {id,  username, email,  address: {street,suite, city,zipcode, geo: {lat,lng }},  phone,website, company: {name, catchPhrase, bs} } = props
+
+    const dispatch = useAppDispatch()
+
+    const handleOnclick = () => {
+        dispatch(deleteUser(id))
+    }
 
 
   return (
@@ -45,7 +53,7 @@ const UserItem: FC<PropsUsers> = (props) => {
             <div>bs:{bs}</div>
        </div>
        </div>
-        
+            <button onClick={handleOnclick}> delete </button>
         <hr />
 
     </li>
