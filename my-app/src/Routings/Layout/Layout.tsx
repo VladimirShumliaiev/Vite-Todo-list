@@ -4,6 +4,7 @@ import LayoutItem from "./LayoutItem";
 import HomePage from "../../components/HomePage/HomePage";
 import Todo from "../../components/Todo/Todo";
 import Trial from '../../components/Trial/Trial'
+import Users from "../../components/Users/Users";
 
 const Layout = () => {
   return (
@@ -14,6 +15,7 @@ const Layout = () => {
           <Route path="todo" element={<Todo />} />
           <Route path="trial" element={<Trial />} />
           <Route path="test" element={<div>test</div>} />
+          <Route path="users" element={<Users />} />
         </Route>
       </Routes>
     </div>

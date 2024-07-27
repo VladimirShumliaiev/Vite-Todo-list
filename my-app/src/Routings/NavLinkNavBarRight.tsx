@@ -25,6 +25,12 @@ const NavLinkNavBarRight: FC = () => {
           Test{" "}
         </NavLink>
       </div>
+
+      <div>
+        <NavLink className={isActive} to={'users'}>
+           Users
+        </NavLink>
+      </div>
     </div>
   );
 };
