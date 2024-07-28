@@ -15,7 +15,8 @@ const Users = () => {
 
   return (
     <div>
-        {time.toLocaleString()}
+        {time.toDateString()}{' '}
+        {time.toLocaleTimeString()}
         <UserList />
     </div>
   )
