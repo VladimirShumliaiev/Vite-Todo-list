@@ -5,19 +5,14 @@ import UserList from './UserList'
 
 const Users = () => {
     const dispatch = useAppDispatch()
-    const [time, setTime] = useState(new Date())
-
-    setInterval(() => setTime(new Date),1000)
-
+   
     useEffect(() => {
         dispatch(fetchUser())
     }, [])
 
   return (
     <div>
-        {time.toDateString()}
-        {' '}
-        {time.toLocaleTimeString()}
+       
         <UserList />
     </div>
   )
