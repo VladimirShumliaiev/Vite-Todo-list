@@ -5,7 +5,7 @@ import { useAppDispatch } from "../../hooks/hooks";
 import { addTodo, fetchTodo } from "../../redux/todoSlice";
 
 const Todo = () => {
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState('');
   const dispatch = useAppDispatch();
 
   useEffect(() => {
