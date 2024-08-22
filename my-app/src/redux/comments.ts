@@ -4,6 +4,7 @@ import axios from "axios";
 type Comments = {
   postId: string;
   id: string;
+  name: string;
   email: string;
   body: string;
 };
@@ -52,7 +53,25 @@ export const addComments = createAsyncThunk<
   Comments,
   string,
   { rejetValue: string }
->("comments/addComments", async (name, { rejectWithValue }) => {});
+>(
+  "comments/addComments",
+  async (name, email, body, id, postId, { rejectWithValue }) => {
+    const response = await axios.post(
+      `https://jsonplaceholder.typicode.com/comments`,
+      {
+        postId: postId,
+        id: id,
+        name: name,
+        email: email,
+        body: body,
+      }
+    );
+    if (!response) {
+      return rejectWithValue("error addComments");
+    }
+    return (await response.data) as Comments;
+  }
+);
 
 const commentsSlice = createSlice({
   name: "comments",
