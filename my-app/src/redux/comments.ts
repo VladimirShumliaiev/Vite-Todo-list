@@ -11,10 +11,14 @@ type Comments = {
 
 type CommentsState = {
   commentsList: Comments[];
+  loading: boolean;
+  error: string | null;
 };
 
 const initialState: CommentsState = {
   commentsList: [],
+  loading: false,
+  error: null,
 };
 
 export const fetchComments = createAsyncThunk<
@@ -77,10 +81,29 @@ const commentsSlice = createSlice({
   name: "comments",
   initialState: initialState,
   reducers: {},
-  extraReducers: (builder) => builder
-  .addCase(fetchComments.pending, (state) => {
-    state.commentsList = 
-  }),
+  extraReducers: (builder) =>
+    builder
+      .addCase(fetchComments.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchComments.fulfilled, (state, action) => {
+        state.commentsList = action.payload;
+        state.loading = false;
+      })
+      .addCase(deleteComments.fulfilled, (state, action) => {
+        state.commentsList = state.commentsList.filter(
+          (e) => e.id !== action.payload
+        );
+      })
+      .addCase(addComments.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(addComments.fulfilled, (state, action) => {
+        state.commentsList.push(action.payload);
+        state.loading = false;
+      }),
 });
 
 export default commentsSlice.reducer;
