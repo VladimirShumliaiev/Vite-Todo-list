@@ -51,11 +51,11 @@ export const deleteComments = createAsyncThunk<
 
 export const addComments = createAsyncThunk<
   Comments,
-  string,
-  { rejetValue: string }
+  { name: string; email: string; body: string; id: string; postId: string },
+  { rejectValue: string }
 >(
   "comments/addComments",
-  async (name, email, body, id, postId, { rejectWithValue }) => {
+  async ({ name, email, body, id, postId }, { rejectWithValue }) => {
     const response = await axios.post(
       `https://jsonplaceholder.typicode.com/comments`,
       {
@@ -69,7 +69,7 @@ export const addComments = createAsyncThunk<
     if (!response) {
       return rejectWithValue("error addComments");
     }
-    return (await response.data) as Comments;
+    return response.data as Comments;
   }
 );
 
@@ -77,6 +77,10 @@ const commentsSlice = createSlice({
   name: "comments",
   initialState: initialState,
   reducers: {},
+  extraReducers: (builder) => builder
+  .addCase(fetchComments.pending, (state) => {
+    state.commentsList = 
+  }),
 });
 
 export default commentsSlice.reducer;
