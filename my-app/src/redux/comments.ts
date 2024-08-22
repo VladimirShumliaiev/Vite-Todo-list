@@ -55,16 +55,15 @@ export const deleteComments = createAsyncThunk<
 
 export const addComments = createAsyncThunk<
   Comments,
-  { name: string; email: string; body: string; id: string; postId: string },
+  { name: string; email: string; body: string },
   { rejectValue: string }
 >(
   "comments/addComments",
-  async ({ name, email, body, id, postId }, { rejectWithValue }) => {
+  async ({ name, email, body }, { rejectWithValue }) => {
     const response = await axios.post(
       `https://jsonplaceholder.typicode.com/comments`,
       {
-        postId: postId,
-        id: id,
+        id: Date.now(),
         name: name,
         email: email,
         body: body,
