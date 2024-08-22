@@ -48,7 +48,11 @@ export const deleteComments = createAsyncThunk<
   return id;
 });
 
-export const addComments;
+export const addComments = createAsyncThunk<
+  Comments,
+  string,
+  { rejetValue: string }
+>("comments/addComments", async (name, { rejectWithValue }) => {});
 
 const commentsSlice = createSlice({
   name: "comments",
