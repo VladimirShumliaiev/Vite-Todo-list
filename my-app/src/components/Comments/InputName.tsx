@@ -30,7 +30,7 @@ const handleOnchangeName: React.ChangeEventHandler<HTMLInputElement> = (event) =
       <input type="text" value={name} onChange={handleOnchangeName} placeholder="name" />
       </div>
     
-      <button>add</button>
+      {/* <button>add</button> */}
     </form>
   );
 };

@@ -32,9 +32,15 @@ const Comments = () => {
 
   return (
     <div>
+      <form >
       <Input  state={state} setState={setState} addComments={CommentsAdd} />
       <InputEmail email={email} setEmail={setEmail} addEmail={EmailAdd}/>
       <InputName name={name} setName={setName} addName={NameAdd}  />
+      <button>add</button>
+      </form>
+      {/* <Input  state={state} setState={setState} addComments={CommentsAdd} />
+      <InputEmail email={email} setEmail={setEmail} addEmail={EmailAdd}/>
+      <InputName name={name} setName={setName} addName={NameAdd}  /> */}
       <ListComments />
     </div>
   );
