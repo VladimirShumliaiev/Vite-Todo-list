@@ -3,6 +3,9 @@ import { useAppDispatch } from "../../hooks/hooks";
 import { addComments, addEmail, addName, fetchComments } from "../../redux/commentsSlice";
 import Input from "./Input";
 import ListComments from "./ListComments";
+import InputName from "./InputName";
+import InputEmail from "./inputEmail";
+
 
 
 const Comments = () => {
@@ -20,16 +23,18 @@ const Comments = () => {
   };
 
   const EmailAdd = () => {
-    dispatch(addEmail(state));
+    dispatch(addEmail(email));
   };
 
   const NameAdd = () => {
-    dispatch(addName(state));
+    dispatch(addName(name));
   };
 
   return (
     <div>
-      <Input name={name} setName={setName} email={email} setEmail={setEmail} state={state} setState={setState} addComments={CommentsAdd} addEmail={EmailAdd} addName={NameAdd} />
+      <Input  state={state} setState={setState} addComments={CommentsAdd} />
+      <InputEmail email={email} setEmail={setEmail} addEmail={EmailAdd}/>
+      <InputName name={name} setName={setName} addName={NameAdd}  />
       <ListComments />
     </div>
   );
