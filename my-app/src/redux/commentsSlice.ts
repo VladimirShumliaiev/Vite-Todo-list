@@ -57,22 +57,55 @@ export const addComments = createAsyncThunk<
   Comments,
   string,
   { rejectValue: string }
->(
-  "comments/addComments",
-  async (body, { rejectWithValue }) => {
-    const response = await axios.post(
-      `https://jsonplaceholder.typicode.com/comments`,
-      {
-        id: Date.now(),
-        body: body,
-      }
-    );
-    if (!response) {
-      return rejectWithValue("error addComments");
+>("comments/addComments", async (body, { rejectWithValue }) => {
+  const response = await axios.post(
+    `https://jsonplaceholder.typicode.com/comments`,
+    {
+      id: Date.now(),
+      body: body,
     }
-    return response.data as Comments;
+  );
+  if (!response) {
+    return rejectWithValue("error addComments");
   }
-);
+  return response.data as Comments;
+});
+
+export const addName = createAsyncThunk<
+  Comments,
+  string,
+  { rejectValue: string }
+>("comments/addName", async (name, { rejectWithValue }) => {
+  const response = await axios.post(
+    `https://jsonplaceholder.typicode.com/comments`,
+    {
+      id: Date.now(),
+      name: name,
+    }
+  );
+  if (!response) {
+    return rejectWithValue("error addComments");
+  }
+  return response.data as Comments;
+});
+
+export const addEmail = createAsyncThunk<
+  Comments,
+  string,
+  { rejectValue: string }
+>("comments/addEmail", async (email, { rejectWithValue }) => {
+  const response = await axios.post(
+    `https://jsonplaceholder.typicode.com/comments`,
+    {
+      id: Date.now(),
+      email: email,
+    }
+  );
+  if (!response) {
+    return rejectWithValue("error addComments");
+  }
+  return response.data as Comments;
+});
 
 const commentsSlice = createSlice({
   name: "comments",
@@ -98,6 +131,22 @@ const commentsSlice = createSlice({
         state.error = null;
       })
       .addCase(addComments.fulfilled, (state, action) => {
+        state.commentsList.push(action.payload);
+        state.loading = false;
+      })
+      .addCase(addEmail.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(addEmail.fulfilled, (state, action) => {
+        state.commentsList.push(action.payload);
+        state.loading = false;
+      })
+      .addCase(addName.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(addName.fulfilled, (state, action) => {
         state.commentsList.push(action.payload);
         state.loading = false;
       }),
