@@ -27,7 +27,7 @@ const InputEmail: FC<Props> = (props) => {
         <div>
         <input type="text" value={email} onChange={handleOnchangeEmail} placeholder="email" />
         </div>
-      {/* <button>add</button> */}
+      <button>add</button>
     </form>
   );
 };

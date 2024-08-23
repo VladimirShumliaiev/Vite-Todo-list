@@ -30,7 +30,7 @@ const Input: FC<Props> = (props) => {
       <div>
       <input type="text" value={state} onChange={handleOnchange} placeholder="body"/>
       </div>
-      {/* <button>add</button> */}
+      <button>add</button>
     </form>
   );
 };
