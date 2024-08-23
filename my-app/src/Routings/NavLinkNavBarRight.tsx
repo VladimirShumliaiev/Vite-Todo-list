@@ -22,7 +22,7 @@ const NavLinkNavBarRight: FC = () => {
       <div>
         <NavLink className={isActive} to={"test"}>
           {" "}
-          Test{" "}
+          Comments{" "}
         </NavLink>
       </div>
 

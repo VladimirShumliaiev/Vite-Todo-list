@@ -5,6 +5,7 @@ import HomePage from "../../components/HomePage/HomePage";
 import Todo from "../../components/Todo/Todo";
 import Trial from '../../components/Trial/Trial'
 import Users from "../../components/Users/Users";
+import Comments from "../../components/Comments/Comments";
 
 const Layout = () => {
   return (
@@ -14,7 +15,7 @@ const Layout = () => {
           <Route index element={<HomePage />} />
           <Route path="todo" element={<Todo />} />
           <Route path="trial" element={<Trial />} />
-          <Route path="test" element={<div>test</div>} />
+          <Route path="test" element={<Comments/>} />
           <Route path="users" element={<Users />} />
         </Route>
       </Routes>

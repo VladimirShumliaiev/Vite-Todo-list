@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-type Comments = {
+export type Comments = {
   postId: string;
   id: string;
   name: string;
@@ -55,17 +55,15 @@ export const deleteComments = createAsyncThunk<
 
 export const addComments = createAsyncThunk<
   Comments,
-  { name: string; email: string; body: string },
+  string,
   { rejectValue: string }
 >(
   "comments/addComments",
-  async ({ name, email, body }, { rejectWithValue }) => {
+  async (body, { rejectWithValue }) => {
     const response = await axios.post(
       `https://jsonplaceholder.typicode.com/comments`,
       {
         id: Date.now(),
-        name: name,
-        email: email,
         body: body,
       }
     );
