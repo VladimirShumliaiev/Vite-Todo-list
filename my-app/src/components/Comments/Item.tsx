@@ -16,7 +16,7 @@ const Item: FC<Props> = (props) => {
       <div>email: {email}</div>
       <div>name: {name}</div>
       <div>body: {body}</div>
-      <button onClick={handleDelete}>del</button>
+      <button onClick={handleDelete}>delete</button>
       <hr />
     </div>
   );
