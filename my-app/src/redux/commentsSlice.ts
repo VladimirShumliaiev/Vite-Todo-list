@@ -98,6 +98,7 @@ export const addEmail = createAsyncThunk<
     `https://jsonplaceholder.typicode.com/comments`,
     {
       id: Date.now(),
+      body: body,
       email: email,
     }
   );
