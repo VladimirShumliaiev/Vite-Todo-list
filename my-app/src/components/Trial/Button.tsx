@@ -28,7 +28,10 @@ const Button: FC<ButtonProps> = (props) => {
       <div>
         <button className={state === trialObject.six ? 'trial-skyBlue' : ''}onClick={() => handleOnclick(trialObject.six)}>six</button>
       </div>
+      <div className='trial-skyBlue'>
       {state}
+      </div>
+     
     </div>
   );
 };
