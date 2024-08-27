@@ -17,8 +17,8 @@ const Button: FC<ButtonProps> = (props) => {
   return (
     <div>
       <div>
-        {/* <button className={state === trialObject.one ? 'trial-blue' : ''} onClick={() => handleOnclick(trialObject.one)}>one</button>
-        <button className={state === trialObject.two ? 'trial-green' : ''} onClick={() => handleOnclick(trialObject.two)}>two</button> */}
+        <button className={state === trialObject.one ? 'trial-blue' : ''} onClick={() => handleOnclick(trialObject.one)}>one</button>
+        <button className={state === trialObject.two ? 'trial-green' : ''} onClick={() => handleOnclick(trialObject.two)}>two</button>
       </div>
       <div>
         <button className={state === trialObject.three ? 'trial-yellow' : ''} onClick={() => handleOnclick(trialObject.three)}>tree</button>
