@@ -7,6 +7,7 @@ import Trial from '../../components/Trial/Trial'
 import Users from "../../components/Users/Users";
 import Comments from "../../components/Comments/Comments";
 import Counter from "../../components/Counter/Counter";
+import Quiz from "../../components/Quiz/Quiz";
 
 
 const Layout = () => {
@@ -20,6 +21,7 @@ const Layout = () => {
           <Route path="test" element={<Comments/>} />
           <Route path="users" element={<Users />} />
           <Route path="counter" element={<Counter />} />
+          <Route path="quiz" element={<Quiz />} />
         </Route>
       </Routes>
     </div>

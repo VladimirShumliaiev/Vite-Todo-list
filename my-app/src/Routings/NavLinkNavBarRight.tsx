@@ -36,6 +36,11 @@ const NavLinkNavBarRight: FC = () => {
            Counter
         </NavLink>
       </div>
+      <div>
+        <NavLink className={isActive} to={'quiz'}>
+           Quiz
+        </NavLink>
+      </div>
     </div>
   );
 };
