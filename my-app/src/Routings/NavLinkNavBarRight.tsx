@@ -31,6 +31,11 @@ const NavLinkNavBarRight: FC = () => {
            Users
         </NavLink>
       </div>
+      <div>
+        <NavLink className={isActive} to={'counter'}>
+           Counter
+        </NavLink>
+      </div>
     </div>
   );
 };

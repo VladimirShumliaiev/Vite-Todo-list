@@ -6,6 +6,7 @@ import Todo from "../../components/Todo/Todo";
 import Trial from '../../components/Trial/Trial'
 import Users from "../../components/Users/Users";
 import Comments from "../../components/Comments/Comments";
+import Counter from "../../components/Counter/Counter";
 
 
 const Layout = () => {
@@ -18,6 +19,7 @@ const Layout = () => {
           <Route path="trial" element={<Trial />} />
           <Route path="test" element={<Comments/>} />
           <Route path="users" element={<Users />} />
+          <Route path="counter" element={<Counter />} />
         </Route>
       </Routes>
     </div>
