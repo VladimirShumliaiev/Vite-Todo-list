@@ -8,6 +8,7 @@ import Users from "../../components/Users/Users";
 import Comments from "../../components/Comments/Comments";
 import Counter from "../../components/Counter/Counter";
 import Quiz from "../../components/Quiz/Quiz";
+import SquaresApp from "../../components/Squares/SquaresApp";
 
 
 const Layout = () => {
@@ -22,6 +23,7 @@ const Layout = () => {
           <Route path="users" element={<Users />} />
           <Route path="counter" element={<Counter />} />
           <Route path="quiz" element={<Quiz />} />
+          <Route path="squares" element={<SquaresApp />} />
         </Route>
       </Routes>
     </div>
