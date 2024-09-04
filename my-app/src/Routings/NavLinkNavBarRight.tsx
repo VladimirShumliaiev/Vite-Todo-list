@@ -40,6 +40,11 @@ const NavLinkNavBarRight: FC = () => {
         <NavLink className={isActive} to={'quiz'}>
            Quiz
         </NavLink>
+        <div>
+        <NavLink className={isActive} to={'squares'}>
+           Squares
+        </NavLink>
+      </div>
       </div>
     </div>
   );
