@@ -9,9 +9,7 @@ type Props = {
 const Button: FC<Props> = (props) => {
   const { state, setState } = props;
 
-  const handleOnClick: React.MouseEventHandler<HTMLButtonElement> = (
-    value: string
-  ) => {
+  const handleOnClick = (value: string) => {
     setState(value);
   };
 
