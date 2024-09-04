@@ -27,7 +27,9 @@ const Button: FC<Props> = (props) => {
       <button onClick={() => handleOnClick(squaresObject.four.title)}>
         {squaresObject.four.name}
       </button>
+      
       <div> {state} </div>
+
     </div>
   );
 };
