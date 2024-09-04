@@ -6,7 +6,7 @@ const SquaresApp = () => {
     const [squares, setSquares] = useState('')
   return (
     <div>
-        <Button />
+        <Button state={squares} setState={setSquares} />
         <List />
     </div>
   )
