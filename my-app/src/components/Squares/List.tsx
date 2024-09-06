@@ -1,16 +1,16 @@
-import React from 'react'
-import { squaresObject } from './squares'
+// import React from 'react'
+// import { squaresObject } from './squares'
 
 
-const List = () => {
+// const List = () => {
   
-  return (
-    <div>
-        {
-          squaresObject.map((e,i) => {})
-        }
-    </div>
-  )
-}
+//   return (
+//     <div>
+//         {
+//           squaresObject.map((e,i) => {() => })
+//         }
+//     </div>
+//   )
+// }
 
-export default List
+// export default List
