@@ -4,10 +4,9 @@ import Button from './Button'
 
 const SquaresApp = () => {
     const [squares, setSquares] = useState('A')
-    const{ title, setTitle} = useState('')
   return (
     <div>
-        <Button title={title} setTitle={setTitle} state={squares} setState={setSquares} />
+        <Button state={squares} setState={setSquares} />
         {/* <List /> */}
     </div>
   )

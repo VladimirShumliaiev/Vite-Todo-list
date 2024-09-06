@@ -4,39 +4,37 @@ import { squaresObject } from "./squares";
 type Props = {
   state: string;
   setState: (square: string) => void;
-  title: string;
-  setTitle: (e: string) => void
 };
 
 const Button: FC<Props> = (props) => {
-  const { title, setTitle, state, setState } = props;
+  const { state, setState } = props;
 
 
   const handleOnClick = (value: string) => {
     setState(value);
   };
 
-  const handleTitle = (event: string) => {
-    setTitle(event)
-  }
- 
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setState(event.target.value);
+  };
+
   return (
     <div>
-      <button onClick={() => handleTitle(title)}>
+      <input value={squaresObject.one.title} onChange={handleInputChange} />
+      <button onClick={() => handleOnClick(squaresObject.one.title)}>
         {squaresObject.one.name}
       </button>
       <button onClick={() => handleOnClick('Hello')}>
         {squaresObject.two.name}
       </button>
-      <button onClick={() => handleOnClick(title)}>
+      <button onClick={() => handleOnClick(state)}>
         {squaresObject.three.name}
       </button>
-      <button onClick={() => handleOnClick(title)}>
+      <button onClick={() => handleOnClick(state)}>
         {squaresObject.four.name}
       </button>
       
       <div> {state} </div>
-      <div>{title}</div>
 
     </div>
   );
