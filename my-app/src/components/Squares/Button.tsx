@@ -4,13 +4,15 @@ import { squaresObject } from "./squares";
 type Props = {
   state: string;
   setState: (square: string) => void;
+  title: string;
+  setTitle: (e: string) => void
 };
 
 const Button: FC<Props> = (props) => {
-  const { state, setState } = props;
-  const{ title, setTitle} = useState('')
+  const { title, setTitle, state, setState } = props;
 
-  const handleOnClick = (value: (e: string) => void) => {
+
+  const handleOnClick = (value: string) => {
     setState(value);
   };
 
@@ -20,16 +22,16 @@ const Button: FC<Props> = (props) => {
  
   return (
     <div>
-      <button onClick={() => handleTitle()}>
+      <button onClick={() => handleTitle(title)}>
         {squaresObject.one.name}
       </button>
-      <button onClick={() => handleOnClick(squaresObject.two)}>
+      <button onClick={() => handleOnClick('Hello')}>
         {squaresObject.two.name}
       </button>
-      <button onClick={() => handleOnClick(squaresObject.three.title)}>
+      <button onClick={() => handleOnClick(title)}>
         {squaresObject.three.name}
       </button>
-      <button onClick={() => handleOnClick(squaresObject.four.title)}>
+      <button onClick={() => handleOnClick(title)}>
         {squaresObject.four.name}
       </button>
       
