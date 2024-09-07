@@ -10,15 +10,17 @@ type Props = {
 const Button: FC<Props> = (props) => {
   const { state, setState , addText} = props;
 
-  const handleOnClick = ( ) => {
-
+  const handleOnClick: React.MouseEventHandler<HTMLButtonElement> = (event: string ) => {
+    return {
+      setState(event.target.value)
+    }
   }
 
 
 
   return (
     <div>
-        <button onClick={}>one</button>
+        <button onClick={handleOnClick}>one</button>
         <button>one</button>
         <button>one</button>
         <button>one</button>
