@@ -20,10 +20,14 @@ const Button: FC<Props> = (props) => {
 
   return (
     <div>
-      <input value={squaresObject.one.title} onChange={handleInputChange} />
       <button onClick={() => handleOnClick(squaresObject.one.title)}>
         {squaresObject.one.name}
       </button>
+      if (handleOnClick) {
+        <input value={squaresObject.one.title} onChange={handleInputChange} />
+      }
+     
+      
       <button onClick={() => handleOnClick('Hello')}>
         {squaresObject.two.name}
       </button>
@@ -34,7 +38,7 @@ const Button: FC<Props> = (props) => {
         {squaresObject.four.name}
       </button>
       
-      <div> {state} </div>
+      <div></div>
 
     </div>
   );
