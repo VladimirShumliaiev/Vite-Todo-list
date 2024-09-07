@@ -10,20 +10,20 @@ type Props = {
 const Button: FC<Props> = (props) => {
   const { state, setState , addText} = props;
 
-  const handleOnClick: React.MouseEventHandler<HTMLButtonElement> = (event: string ) => {
-    return {
-      setState(event.target.value)
-    }
-  }
-
-
+  const handleOnClick = (value: string) => {
+    setState(value);
+  };
 
   return (
     <div>
-        <button onClick={handleOnClick}>one</button>
-        <button>one</button>
-        <button>one</button>
-        <button>one</button>
+        <button onClick={() => handleOnClick(squaresObject.one.name)}>one</button>
+        <button onClick={() => handleOnClick(squaresObject.two.name)}>two</button>
+        <button onClick={() => handleOnClick(squaresObject.three.name)}>three</button>
+        <button onClick={() => handleOnClick(squaresObject.four.name)}>four</button>
+        <div>
+          {state}
+        </div>
+      
     </div>
   );
 };
