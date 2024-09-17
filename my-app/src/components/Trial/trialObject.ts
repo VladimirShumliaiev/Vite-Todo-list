@@ -2,7 +2,7 @@ export const trialObject = {
   one: "Hello JS",
   two: "Hello TS",
   three: "Hello React",
-  four: "hello html",
+  four: "Hello html",
   five: "hello css",
   six: "hello World!!!",
 };
