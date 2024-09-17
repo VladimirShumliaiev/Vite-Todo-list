@@ -1,6 +1,6 @@
 export const trialObject = {
   one: "Hello JS",
-  two: "hello TS",
+  two: "Hello TS",
   three: "hello React",
   four: "hello html",
   five: "hello css",
