@@ -4,5 +4,5 @@ export const trialObject = {
   three: "Hello React",
   four: "Hello html",
   five: "Hello css",
-  six: "hello World!!!",
+  six: "Hello World!!!",
 };
