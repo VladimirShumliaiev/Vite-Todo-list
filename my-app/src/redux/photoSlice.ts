@@ -27,14 +27,14 @@ export const fetchPhotos = createAsyncThunk<
   { rejectValue: string }
 >("Photo/fetchPhotos", async (_, { rejectWithValue }) => {
   const response = await axios.get(
-    "https://jsonplaceholder.typicode.com/photos"
+    "https://jsonplaceholder.typicode.com/photos/?_limit=10"
   );
 
   if (!response) {
     return rejectWithValue("Error");
   }
 
-  return await response.data();
+  return await response.data;
 });
 
 const photoSlice = createSlice({
