@@ -56,13 +56,13 @@ export const addTodo = createAsyncThunk<Todo, string, { rejectValue: string }>(
 export const completeTodo = createAsyncThunk<
   Todo,
   string,
-  { rejectValue: string; state: { completeTodo: TodoState } }
+  { rejectValue: string; state: { todo: TodoState } }
 >("todo/completeTodo", async function (id, { rejectWithValue, getState }) {
   const response = await axios.patch(
     `https://jsonplaceholder.typicode.com/todos/${id}`
   );
 
-  const completed = getState().completeTodo.todoList.find((e) => e.id === id);
+  const completed = getState().todo.todoList.find((e) => e.id === id);
 
   if (completed) {
     if (!response) {

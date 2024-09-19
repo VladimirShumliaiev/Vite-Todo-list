@@ -17,7 +17,10 @@ const ListItem:FC<ItemProps> = (props) => {
   }
 
   const handleOnClick = () => {
-    dispatch(deleteTodo(id))
+    if (window.confirm('delete todo')) {
+      dispatch(deleteTodo(id))
+    }
+
   }
   return (
     <div>
