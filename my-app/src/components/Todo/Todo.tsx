@@ -1,17 +1,24 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import List from './List'
 import { useAppDispatch } from '../../hooks/hooks'
-import { fetchTodo } from '../../redux/todoSlice'
+import { addTodo, fetchTodo } from '../../redux/todoSlice'
+import Input from './Input'
 
 const Todo = () => {
-const dispatch = useAppDispatch()
+  const [title, setTitle] = useState('')
+  const dispatch = useAppDispatch()
 
 useEffect(() => {
   dispatch(fetchTodo())
 },[])
 
+const addTask = () => {
+  dispatch(addTodo(title))
+}
+
   return (
     <div>
+        <Input text={title} setText={setTitle} addTodo={addTask}/>
         <List/>
     </div>
   )
