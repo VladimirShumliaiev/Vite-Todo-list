@@ -1,27 +1,11 @@
-import React, { FC } from "react";
-import { Todo, deleteTodo, toggleTodo } from "../../redux/todoSlice";
-import { useAppDispatch } from "../../hooks/hooks";
+import React from 'react'
 
-const ListItem: FC<Todo> = (props) => {
-  const { id, title, completed } = props;
-  const dispatch = useAppDispatch();
-
-  const onChangeHandler = () => {
-    dispatch(toggleTodo(id));
-  };
-
-  const onClickHandle = () => {
-    if (window.confirm("delete todo")) {
-      dispatch(deleteTodo(id));
-    }
-  };
+const ListItem = () => {
   return (
     <div>
-      <input type="checkbox" checked={completed} onChange={onChangeHandler} />
-      {title}
-      <button onClick={onClickHandle}> delete </button>
+      
     </div>
-  );
-};
+  )
+}
 
-export default ListItem;
+export default ListItem
