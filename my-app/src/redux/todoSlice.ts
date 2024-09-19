@@ -4,7 +4,6 @@ import axios from "axios";
 
 type Todo = {
   id: string;
-  userId: string;
   completed: boolean;
   title: string;
 };
@@ -26,7 +25,9 @@ export const fetchTodo = createAsyncThunk<
   undefined,
   { rejectValue: string }
 >("todo/fetchTodo", async (_, { rejectWithValue }) => {
-  const response = await axios("https://jsonplaceholder.typicode.com/todos");
+  const response = await axios(
+    "https://jsonplaceholder.typicode.com/todos/?_limit=5"
+  );
 
   if (!response) {
     return rejectWithValue("error fetchTodo");
@@ -42,7 +43,7 @@ export const addTodo = createAsyncThunk<Todo, string, { rejectValue: string }>(
       {
         id: Date.now(),
         title: title,
-        completed: true,
+        completed: false,
       }
     );
 
@@ -57,7 +58,7 @@ export const completeTodo = createAsyncThunk<
   Todo,
   string,
   { rejectValue: string; state: { todo: TodoState } }
->("todo/completeTodo", async function (id, { rejectWithValue, getState }) {
+>("todo/completeTodo", async (id, { rejectWithValue, getState }) => {
   const response = await axios.patch(
     `https://jsonplaceholder.typicode.com/todos/${id}`
   );

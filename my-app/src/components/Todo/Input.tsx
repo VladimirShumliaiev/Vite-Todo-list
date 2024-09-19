@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 type InputProps = {
     text: string
-    setText: (title: string) => void
+    setText: (text: string) => void
     addTodo: () => void
 }
 
