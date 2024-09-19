@@ -9,17 +9,23 @@ type InputProps = {
 const Input:FC<InputProps> = (props) => {
     const {text, setText, addTodo} = props
 
+  
+
+    const handleOnSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
+        event.preventDefault()
+        if (text.trim().length){
+            addTodo()
+            setText('')
+        }
+    }   
+
     const handleOnChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
         setText(event.target.value)
     }
 
-    const handleOnSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
-
-    }
-
   return (
     <form onSubmit={handleOnSubmit}>
-        <input type="text" onChange={handleOnChange} placeholder='todo' />
+        <input value={text} onChange={handleOnChange} placeholder='todo' />
         <button>add todo</button>
     </form>
   )

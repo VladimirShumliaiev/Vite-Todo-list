@@ -10,7 +10,7 @@ const Todo = () => {
 
 useEffect(() => {
   dispatch(fetchTodo())
-},[])
+},[dispatch])
 
 const addTask = () => {
   dispatch(addTodo(title))

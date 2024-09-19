@@ -42,7 +42,7 @@ export const addTodo = createAsyncThunk<Todo, string, { rejectValue: string }>(
       {
         id: Date.now(),
         title: title,
-        completed: false,
+        completed: true,
       }
     );
 
