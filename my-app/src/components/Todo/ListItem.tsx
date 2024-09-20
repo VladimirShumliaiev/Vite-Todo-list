@@ -25,8 +25,8 @@ const ListItem:FC<ItemProps> = (props) => {
   return (
     <div>
       <input type={'checkbox'} checked={completed} onChange={handleOnChange} />
-        {title}
-        <button onClick={handleOnClick}>x</button>
+        {title }
+        <button onClick={handleOnClick}> x </button>
     </div>
   )
 }
