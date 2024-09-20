@@ -25,9 +25,7 @@ export const fetchTodo = createAsyncThunk<
   undefined,
   { rejectValue: string }
 >("todo/fetchTodo", async (_, { rejectWithValue }) => {
-  const response = await axios(
-    "https://jsonplaceholder.typicode.com/todos/?_limit=5"
-  );
+  const response = await axios("https://jsonplaceholder.typicode.com/todos");
 
   if (!response) {
     return rejectWithValue("error fetchTodo");
