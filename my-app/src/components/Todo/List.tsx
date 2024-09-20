@@ -19,7 +19,7 @@ const List = () => {
     setPageCount(Math.ceil(list.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, list]);
 
-  const handlePageClick = (event: any) => {
+  const handlePageClick = (event: {selected: number}) => {
     const newOffset = event.selected * itemsPerPage % list.length;
     console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
     setItemOffset(newOffset);
