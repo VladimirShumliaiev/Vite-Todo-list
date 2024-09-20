@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useAppSelector } from '../../hooks/hooks'
 import ListItem from './ListItem'
+import { ReactPaginateProps } from 'react-paginate'
 import ReactPaginate from 'react-paginate'
 import style from './Todo.module.css'
 
@@ -19,7 +20,7 @@ const List = () => {
     setPageCount(Math.ceil(list.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, list]);
 
-  const handlePageClick = (event: {selected: number}) => {
+  const handlePageClick = (event: { selected: number }) => {
     const newOffset = event.selected * itemsPerPage % list.length;
     console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
     setItemOffset(newOffset);
@@ -33,15 +34,15 @@ const List = () => {
   <ReactPaginate
         nextLabel="next >"
         onPageChange={handlePageClick}
-        pageRangeDisplayed={3}
+        pageRangeDisplayed={5}
         marginPagesDisplayed={2}
         pageCount={pageCount}
         previousLabel="< previous"
         pageClassName={style.pageItem}
         pageLinkClassName={style.pageNum}
-        previousClassName={style.pageItem}
+        previousClassName={style.previousClassName}
         previousLinkClassName={style.pageNum}
-        nextClassName={style.pageItem}
+        nextClassName={style.previousClassName}
         nextLinkClassName={style.pageNum}
         breakLabel="..."
         breakClassName={style.pageItem}

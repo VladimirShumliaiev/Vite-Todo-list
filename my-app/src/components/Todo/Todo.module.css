@@ -14,6 +14,10 @@
   color: rgb(255, 136, 0);
 }
 
+.previousClassName {
+  color: rgb(8, 139, 3);
+}
+
 .pageNum {
   padding: 5px 10px;
   font-weight: 400;
