@@ -30,6 +30,7 @@ const List = () => {
         {
           currentItems.map(todo => <ListItem key={todo.id} {...todo}/>)
         }
+        {' '}
   <ReactPaginate
         nextLabel="next >"
         onPageChange={handlePageClick}
