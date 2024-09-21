@@ -25,7 +25,7 @@ const Input:FC<InputProps> = (props) => {
 
   return (
     <form onSubmit={handleOnSubmit}>
-        <input value={text} onChange={handleOnChange} placeholder='todo' />
+        <input value={text} onChange={handleOnChange} placeholder='todo...' />
         <button>add todo</button>
     </form>
   )
