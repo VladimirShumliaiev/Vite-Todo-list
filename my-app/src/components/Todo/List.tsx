@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useAppSelector } from '../../hooks/hooks'
 import ListItem from './ListItem'
-import { ReactPaginateProps } from 'react-paginate'
 import ReactPaginate from 'react-paginate'
 import style from './Todo.module.css'
 
@@ -11,7 +10,7 @@ const List = () => {
   const [currentItems, setCurrentItems] = useState(list);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 10
+  const itemsPerPage = 20
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
