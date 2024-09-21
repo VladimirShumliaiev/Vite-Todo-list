@@ -19,7 +19,6 @@ const addTask = () => {
   return (
     <div>
         <Input text={title} setText={setTitle} addTodo={addTask}/>
-        {' '}
         <List/>
     </div>
   )
