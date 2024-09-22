@@ -82,15 +82,19 @@ export const deleteTodo = createAsyncThunk<
   string,
   { rejectValue: string }
 >("todo/deleteTodo", async (id, { rejectWithValue }) => {
-  const response = await axios.delete(
-    `https://jsonplaceholder.typicode.com/todos/${id}`
-  );
+  try {
+    const response = await axios.delete(
+      `https://jsonplaceholder.typicode.com/todos/${id}`
+    );
 
-  if (!response) {
-    return rejectWithValue("error delete todo");
+    if (!response) {
+      throw new Error("error delete todo");
+    }
+
+    return id;
+  } catch (e) {
+    return rejectWithValue(e.message);
   }
-
-  return id;
 });
 
 const todoSlice = createSlice({
@@ -122,6 +126,9 @@ const todoSlice = createSlice({
       })
       .addCase(deleteTodo.fulfilled, (state, action) => {
         state.todoList = state.todoList.filter((e) => e.id !== action.payload);
+      })
+      .addCase(deleteTodo.rejected, (state, action) => {
+        state.error = action.payload;
       })
       .addMatcher(isError, (state, action: PayloadAction<string>) => {
         state.error = action.payload;
