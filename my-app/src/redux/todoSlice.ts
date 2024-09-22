@@ -1,5 +1,5 @@
 import {
-  Action,
+  AnyAction,
   createAsyncThunk,
   createSlice,
   PayloadAction,
@@ -131,6 +131,6 @@ const todoSlice = createSlice({
 
 export default todoSlice.reducer;
 
-function isError(action: { type: string }) {
+function isError(action: AnyAction) {
   return action.type.endsWith("rejected");
 }
