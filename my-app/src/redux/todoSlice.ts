@@ -30,7 +30,7 @@ export const fetchTodo = createAsyncThunk<
   undefined,
   { rejectValue: string }
 >("todo/fetchTodo", async (_, { rejectWithValue }) => {
-  const response = await axios("https://jsonplaceholder.typicode.com/todos");
+  const response = await axios("https://jsonplaceholder.typicode.com/todoss");
 
   if (!response) {
     return rejectWithValue("error fetchTodo");
@@ -131,6 +131,6 @@ const todoSlice = createSlice({
 
 export default todoSlice.reducer;
 
-function isError(action: Action) {
+function isError(action: { type: string }) {
   return action.type.endsWith("rejected");
 }

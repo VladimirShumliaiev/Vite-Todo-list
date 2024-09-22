@@ -16,6 +16,7 @@ useEffect(() => {
 const addTask = () => {
   dispatch(addTodo(title))
 }
+console.log('111',error)
   return (
     <div>
         <Input text={title} setText={setTitle} addTodo={addTask}/>
