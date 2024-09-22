@@ -84,7 +84,7 @@ export const deleteTodo = createAsyncThunk<
 >("todo/deleteTodo", async (id, { rejectWithValue }) => {
   try {
     const response = await axios.delete(
-      `https://jsonplaceholder.typicode.com/todoss/${id}`
+      `https://jsonplaceholder.typicode.com/todos/${id}`
     );
 
     if (!response) {
