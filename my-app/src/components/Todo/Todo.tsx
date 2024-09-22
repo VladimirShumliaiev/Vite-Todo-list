@@ -16,12 +16,11 @@ useEffect(() => {
 const addTask = () => {
   dispatch(addTodo(title))
 }
-
   return (
     <div>
         <Input text={title} setText={setTitle} addTodo={addTask}/>
-        {loading === 'loading' && <h2>Loading...</h2> }
-        {error && <h2>{}</h2>}
+        {loading && <h2>Loading...</h2> }
+        {error && <h2>Error:{error}</h2>}
         <List/>
     </div>
   )

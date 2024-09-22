@@ -1,4 +1,9 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import {
+  Action,
+  createAsyncThunk,
+  createSlice,
+  PayloadAction,
+} from "@reduxjs/toolkit";
 import Todo from "../components/Todo/Todo";
 import axios from "axios";
 
@@ -103,7 +108,6 @@ const todoSlice = createSlice({
         state.loading = false;
       })
       .addCase(addTodo.pending, (state) => {
-        state.loading = true;
         state.error = null;
       })
       .addCase(addTodo.fulfilled, (state, action) => {
@@ -118,7 +122,15 @@ const todoSlice = createSlice({
       })
       .addCase(deleteTodo.fulfilled, (state, action) => {
         state.todoList = state.todoList.filter((e) => e.id !== action.payload);
+      })
+      .addMatcher(isError, (state, action: PayloadAction<string>) => {
+        state.error = action.payload;
+        state.loading = false;
       }),
 });
 
 export default todoSlice.reducer;
+
+function isError(action: Action) {
+  return action.type.endsWith("rejected");
+}
