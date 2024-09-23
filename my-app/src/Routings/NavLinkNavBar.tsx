@@ -17,6 +17,9 @@ const NavLinkNavBar: FC = () => {
       <div>
         <NavLink className={isActive} to={"todo"}> Todo</NavLink>
       </div>
+      <div>
+        <NavLink className={isActive} to={'book'}> React book</NavLink>
+      </div>
     </div>
   );
 };

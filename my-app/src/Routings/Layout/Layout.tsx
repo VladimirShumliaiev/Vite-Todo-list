@@ -10,6 +10,7 @@ import Counter from "../../components/Counter/Counter";
 import Quiz from "../../components/Quiz/Quiz";
 import SquaresApp from "../../components/Squares/SquaresApp";
 import Photos from "../../components/Photos/Photos";
+import Book from "../../components/Book/Book";
 
 
 const Layout = () => {
@@ -26,6 +27,7 @@ const Layout = () => {
           <Route path="quiz" element={<Quiz />} />
           <Route path="squares" element={<SquaresApp />} />
           <Route path="photo" element={<Photos/>}/>
+          <Route path="book" element={<Book/>}/>
         </Route>
       </Routes>
     </div>
