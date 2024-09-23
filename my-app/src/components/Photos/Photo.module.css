@@ -10,3 +10,30 @@
   width: 500px;
   height: 500px;
 }
+
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+.pageNumber {
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: 1px solid;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+a.active {
+  background-color: cornflowerblue;
+  color: rgb(245, 245, 244);
+  border: 1px solid;
+  border-radius: 2px;
+}
+
+.paginationColor {
+  color: lightseagreen;
+}

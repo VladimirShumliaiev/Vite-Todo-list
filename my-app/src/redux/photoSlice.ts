@@ -27,7 +27,7 @@ export const fetchPhotos = createAsyncThunk<
   { rejectValue: string }
 >("Photo/fetchPhotos", async (_, { rejectWithValue }) => {
   const response = await axios.get(
-    "https://jsonplaceholder.typicode.com/photos/?_limit=10"
+    "https://jsonplaceholder.typicode.com/photos"
   );
 
   if (!response) {
