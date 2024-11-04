@@ -7,7 +7,7 @@ import {
 import Todo from "../components/Todo/Todo";
 import axios from "axios";
 
-type Todo = {
+atype Todo = {
   id: string;
   completed: boolean;
   title: string;
