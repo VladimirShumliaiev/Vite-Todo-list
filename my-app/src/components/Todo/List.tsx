@@ -7,7 +7,7 @@ const List = () => {
   return (
     <div>
        {
-            list.map(todo => <ListItem {...todo}/>)
+            list.map(todo => <ListItem key={todo} {...todo}/>)
           }
     </div>
   )
