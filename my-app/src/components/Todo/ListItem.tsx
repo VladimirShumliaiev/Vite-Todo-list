@@ -6,7 +6,9 @@ const ListItem = () => {
   const list = useAppSelector(state => state.todo.todoList)
   return (
     <div>
-        
+          {
+            list.map(todo => <)
+          }
     </div>
   )
 }
