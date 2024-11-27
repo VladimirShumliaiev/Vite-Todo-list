@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useRef } from 'react'
 
 type InputProps = {
   title: string
@@ -9,6 +9,7 @@ type InputProps = {
 const Input: FC<InputProps> = (props) => {
   const {title, setTitle, addTodo} = props
 
+  const ref = useRef<HTMLInputElement>(null)
   const handleOnSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
       event.preventDefault()
       if (title.trim().length){
@@ -22,7 +23,7 @@ const Input: FC<InputProps> = (props) => {
   }
   return (
     <form onSubmit={handleOnSubmit}>
-      <input type="text" value={title} onChange={handleOnChange}  placeholder='Text' />
+      <input type="text" value={title} onChange={handleOnChange}  placeholder='Text...' ref={ref} />
       <button>add</button>
     </form>
   )

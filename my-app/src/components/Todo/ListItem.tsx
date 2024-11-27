@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
-import { useAppDispatch, useAppSelector } from '../../hooks/hooks'
+import { useAppDispatch} from '../../hooks/hooks'
+import { completeTodo, deleteTodo } from '../../redux/todoSlice';
 
 type Todo = {
   id: string;
@@ -12,14 +13,20 @@ const ListItem: FC<Todo> = (props) => {
   const dispatch = useAppDispatch()
 
   const handleOnChange = () => {
-    dispatch()
+    dispatch(completeTodo(id))
+  }
+
+  const handleDeleteTodo = () => {
+    if (window.confirm('delete todo')) {
+      dispatch(deleteTodo(id))
+    }
   }
   
   return (
     <div>
-        <input type={'checkbox'} checked={completed} onChange={}/>
+        <input type={'checkbox'} checked={completed} onChange={handleOnChange}/>
         {title}
-        <button onClick={}>x</button>
+        <button onClick={handleDeleteTodo}>x</button>
     </div>
   )
 }
