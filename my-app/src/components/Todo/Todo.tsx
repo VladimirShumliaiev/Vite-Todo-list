@@ -17,7 +17,7 @@ const Todo = () => {
   }
   return (
     <div>
-      <Input state={state} setSate={setState} addTodo={addTask}/>
+      <Input title={state} setTitle={setState} addTodo={addTask}/>
       <List/>
     </div>
   )
