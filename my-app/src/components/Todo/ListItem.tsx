@@ -27,7 +27,7 @@ const ListItem: FC<Todo> = (props) => {
         <input type={'checkbox'} checked={completed} onChange={handleOnChange}/>
         {title}
         {' '}
-        <button onClick={handleDeleteTodo}> x </button>
+        <button onClick={handleDeleteTodo}> delete </button>
     </div>
   )
 }
