@@ -72,7 +72,7 @@ export const completeTodo = createAsyncThunk<
 
   if (completed) {
     if (!response) {
-      return rejectWithValue("error completed todo");
+      return rejectWithValue("error toggle todo");
     }
     return (await response.data) as Todo;
   }
