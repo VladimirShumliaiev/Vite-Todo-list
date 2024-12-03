@@ -106,6 +106,15 @@ const todoSlice = createSlice({
       .addCase(addTodo.fulfilled, (state, action) => {
         state.todoList.push(action.payload);
         state.loading = false;
+      })
+      .addCase(toggleTodo.fulfilled, (state, action) => {
+        const toggle = state.todoList.find((e) => e.id === action.payload.id);
+        if (toggle) {
+          toggle.completed = !toggle.completed;
+        }
+      })
+      .addCase(removeTodo.fulfilled, (state, action) => {
+        state.todoList = state.todoList.filter((e) => e.id !== action.payload);
       }),
 });
 
