@@ -7,8 +7,8 @@ const List = () => {
   return (
     <div>
        {
-            list.map(todo => <ListItem key={todo.id} {...todo}/>)
-          }
+        list.map(todo => <ListItem key={todo.id} {...todo}/>)
+       }
     </div>
   )
 }
