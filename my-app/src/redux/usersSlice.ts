@@ -21,9 +21,7 @@ export const fetchUser = createAsyncThunk<
   undefined,
   { rejectValue: string }
 >("Users/fetchUser", async (_, { rejectWithValue }) => {
-  const response = await axios(
-    "https://jsonplaceholder.typicode.com/users/?_limit=15"
-  );
+  const response = await axios("https://jsonplaceholder.typicode.com/users/");
 
   if (!response) {
     return rejectWithValue("error fetch");
