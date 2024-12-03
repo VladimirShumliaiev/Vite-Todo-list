@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { useAppDispatch} from '../../hooks/hooks'
-import { completeTodo, deleteTodo } from '../../redux/todoSlice';
+import { removeTodo, toggleTodo } from '../../redux/todoSlice';
 
 type Todo = {
   id: string;
@@ -13,12 +13,12 @@ const ListItem: FC<Todo> = (props) => {
   const dispatch = useAppDispatch()
 
   const handleOnChange = () => {
-    dispatch(completeTodo(id))
+    dispatch(toggleTodo(id))
   }
 
   const handleDeleteTodo = () => {
     if (window.confirm('delete todo')) {
-      dispatch(deleteTodo(id))
+      dispatch(removeTodo(id))
     }
   }
   
