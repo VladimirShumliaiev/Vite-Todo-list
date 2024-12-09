@@ -18,7 +18,7 @@
 .HeaderLeft {
   display: grid;
   grid-area: HL;
-  background-color: hotpink;
+  background-color: rgb(255, 105, 180);
   padding: 8px;
   /* text-align: center; */
 }
