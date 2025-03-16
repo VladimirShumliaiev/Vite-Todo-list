@@ -7,31 +7,29 @@ import HeaderLeft from "../../components/Header/HeaderLeft";
 import HeaderRight from "../../components/Header/HeaderRight";
 import HeaderCenter from "../../components/Header/HeaderCenter";
 
-
-
 const LayoutItem = () => {
   return (
     <div>
       <div className="App">
-        <div  className='HeaderLeft'>
+        <div className="HeaderLeft">
           <HeaderLeft />
         </div>
-        <div  className='HeaderCenter'>
+        <div className="HeaderCenter">
           <HeaderCenter />
         </div>
-        <div  className='HeaderRight'>
-          <HeaderRight/>
+        <div className="HeaderRight">
+          <HeaderRight />
         </div>
-        <div  className='NavBar'>
+        <div className="NavBar">
           <NavBar />
         </div>
-        <div  className='NavBarRight'>
+        <div className="NavBarRight">
           <NavBarRight />
         </div>
-        <div  className='Main'>
-          <Outlet/>
+        <div className="Main">
+          <Outlet />
         </div>
-        <div  className='Footer'>
+        <div className="Footer">
           <Footer />
         </div>
       </div>
